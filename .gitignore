@@ -10,3 +10,27 @@
 src/__pycache__/
 
 /venv
+.venv
+
+__pycache__
+
+datasets/pcaps/
+datasets/flows/
+*.pcap
+*.p
+capng
+logs/
+*.log
+temp/
+*.tmp
+*.bak
+*.swp
+.DS_Store
+thumbs.db
+.env
+.env.*
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3

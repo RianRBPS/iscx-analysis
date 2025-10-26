@@ -11,7 +11,7 @@ matplotlib.use("Qt5Agg")
 desired_width = 320
 np.set_printoptions(linewidth=desired_width)
 
-flow_files_path = Path("./datasets/flows")
+flow_files_path = Path("./datasets")
 
 # Order is important because 'tor' is included in 'torrent' and tor filenames also include other app names
 app_names = [
