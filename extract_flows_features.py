@@ -6,7 +6,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-matplotlib.use("Qt5Agg")
+matplotlib.use("Agg")
 # Set console width
 desired_width = 320
 np.set_printoptions(linewidth=desired_width)
@@ -91,6 +91,12 @@ n_unambiguous_packets_total = 0
 for app in app_names:
     # Calculate percentage of unique flows
     n_flows_this_app = len(flows_by_app[app])
+    if n_flows_this_app == 0:
+        # Skip apps that have no flows
+        unique_flows_by_app[app] = 0
+        unambiguous_packets_by_app[app] = 0
+        continue
+
     n_non_unique_flows_this_app = len(overlapping_flows_by_app[app])
     n_unique_flows_this_app = n_flows_this_app - n_non_unique_flows_this_app
     flow_overlap_this_app = n_unique_flows_this_app / n_flows_this_app

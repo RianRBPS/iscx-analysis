@@ -34,3 +34,5 @@ thumbs.db
 *.pyo
 *.pyd
 *.sqlite3
+
+artifacts
